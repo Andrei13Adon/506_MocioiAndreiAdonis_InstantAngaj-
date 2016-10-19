@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Ingineria-Programarii", ".", "{139E1D62-9EBA-403C-A87F-14A31BA24756}"
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "506_MocioiAndreiAdonis_InstantAngaj(1)", ".", "{82367454-7A09-4A2D-B0D4-D6D6136CBB04}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		Debug.AspNetCompiler.VirtualPath = "/Ingineria-Programarii"
@@ -26,8 +28,8 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{139E1D62-9EBA-403C-A87F-14A31BA24756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{139E1D62-9EBA-403C-A87F-14A31BA24756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82367454-7A09-4A2D-B0D4-D6D6136CBB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82367454-7A09-4A2D-B0D4-D6D6136CBB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
