@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" href="CssFile.css" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -14,7 +15,6 @@
              <ul class="inline">
                 <asp:Button ID="LogInBut" runat="server" Text="LogIn" OnClick="LogInBut_Click" />
                 <asp:Button ID="SignUpBut" runat="server" Text="Sign Up" OnClick="SignUpBut_Click" />
-                <asp:Button ID="LogOutBut" runat="server" Text="Log Out" />
             </ul>
         </div>
         <div>

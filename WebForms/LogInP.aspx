@@ -5,23 +5,30 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+    <asp:Label ID="Label1" runat="server" ForeColor="Red" ></asp:Label>
     <table class="MarginClass2">
             <tr>
-                <td>Nume</td>
+                <td>Email</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxEmail" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td>Parola</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" TextMode="password"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxParola" runat="server" TextMode="password"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>Firma</td>
+                <td>
+                    <asp:CheckBox ID="CheckBoxFirma" runat="server" />
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <asp:Button ID="Button1" runat="server"  Text="Log In" />
+                    <asp:Button ID="ButtonLogIn" runat="server"  Text="Log In" OnClick="ButtonLogIn_Click" />
                 </td>
             </tr>
         </table>
