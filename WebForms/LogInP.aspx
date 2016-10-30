@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
     <asp:Label ID="Label1" runat="server" ForeColor="Red" ></asp:Label>
-    <table class="MarginClass2">
+        <table class="MarginClass2">
             <tr>
                 <td>Email</td>
                 <td>

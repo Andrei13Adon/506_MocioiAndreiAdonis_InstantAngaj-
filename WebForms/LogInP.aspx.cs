@@ -35,28 +35,28 @@ public partial class WebForms_LogInP : System.Web.UI.Page
             {
                 logatCuSucces = true;
                 Session["login"] = new LogData((Int32)r["Id"], false);
-               
-                Response.Redirect("Homet.aspx");
+
+                Response.Redirect("HomeClientP.aspx");
             }
             //conn.Close();
          if (logatCuSucces == false) Label1.Text = "Numele de utilizator sau parola sunt incorecte";
             conn.Close();
-        }
-        else
-        {
-            SqlCommand c = new SqlCommand("Select Id FROM FirmaP WHERE UPPER(Mail)=UPPER('" + TextBoxEmail.Text + "') AND UPPER(Parola)=UPPER('" + TextBoxParola.Text + "')", conn);
-         SqlDataReader r = c.ExecuteReader();
-         bool logatCuSucces = false;
-         while (r.Read())
-            {
-                logatCuSucces = true;
-                Session["login"] = new LogData((Int32)r["Id"], true);
+         }
+         else
+         {
+             SqlCommand c = new SqlCommand("Select Id FROM FirmaP WHERE UPPER(Mail)=UPPER('" + TextBoxEmail.Text + "') AND UPPER(Parola)=UPPER('" + TextBoxParola.Text + "')", conn);
+             SqlDataReader r = c.ExecuteReader();
+             bool logatCuSucces = false;
+             while (r.Read())
+                {
+                    logatCuSucces = true;
+                    Session["login"] = new LogData((Int32)r["Id"], true);
 
-                Response.Redirect("HomeF.aspx");
-            }
-         //conn.Close();
-         if (logatCuSucces == false) Label1.Text = "Numele de utilizator sau parola sunt incorecte";
-         conn.Close();
+                    Response.Redirect("HomeF.aspx");
+                }
+             //conn.Close();
+             if (logatCuSucces == false) Label1.Text = "Numele de utilizator sau parola sunt incorecte";
+             conn.Close();
         }
 
     }
