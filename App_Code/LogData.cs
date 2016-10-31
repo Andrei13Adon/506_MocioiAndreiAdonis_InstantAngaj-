@@ -21,4 +21,9 @@ public class LogData
         this.Firma = Firma;
     }
 
+    public int getId()
+    {
+        return Id;
+    }
+
 }
