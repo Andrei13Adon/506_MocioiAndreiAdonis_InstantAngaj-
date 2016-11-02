@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class MasterPageClientP : System.Web.UI.MasterPage
+public partial class MasterPageFirmatP : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -13,15 +13,11 @@ public partial class MasterPageClientP : System.Web.UI.MasterPage
     }
     protected void Home_Click(object sender, EventArgs e)
     {
-        Response.Redirect("HomeClientP.aspx");
+        Response.Redirect("HomeClientPP.aspx");
     }
     protected void LogOff_Click(object sender, EventArgs e)
     {
         Session.Clear();
         Response.Redirect("LogInP.aspx");
-    }
-    protected void ButtonCalificare_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("QualificationClientP.aspx");
     }
 }

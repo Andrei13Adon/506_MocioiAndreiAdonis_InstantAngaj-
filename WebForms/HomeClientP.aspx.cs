@@ -11,7 +11,7 @@ public partial class WebForms_HomeClientP : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        if (!Page.IsPostBack && Session["login"] != null)
+        if (Session["login"] != null)//!Page.IsPostBack && 
         {
             SqlConnection conn = DbConnection.GetSqlConnection();
             conn.Open();
