@@ -14,6 +14,8 @@
         <div class="Meniu">
              <ul class="inline">
                  <asp:Button ID="Home" runat="server" Text="Home" OnClick="Home_Click" />
+
+                 <asp:Button ID="AddOferta" runat="server" Text="Adauga Oferta" OnClick="AddOferta_Click" />
                  
                  <asp:Button ID="LogOff" runat="server" Text="Log Off" OnClick="LogOff_Click" />
             </ul>

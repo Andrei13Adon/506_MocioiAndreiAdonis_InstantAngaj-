@@ -52,7 +52,7 @@ public partial class WebForms_LogInP : System.Web.UI.Page
                     logatCuSucces = true;
                     Session["login"] = new LogData((Int32)r["Id"], true);
 
-                    Response.Redirect("HomeF.aspx");
+                    Response.Redirect("HomeFirmaP.aspx");
                 }
              //conn.Close();
              if (logatCuSucces == false) Label1.Text = "Numele de utilizator sau parola sunt incorecte";

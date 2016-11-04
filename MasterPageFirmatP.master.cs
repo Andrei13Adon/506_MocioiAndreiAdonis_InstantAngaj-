@@ -13,11 +13,15 @@ public partial class MasterPageFirmatP : System.Web.UI.MasterPage
     }
     protected void Home_Click(object sender, EventArgs e)
     {
-        Response.Redirect("HomeClientPP.aspx");
+        Response.Redirect("HomeFirmaP.aspx");
     }
     protected void LogOff_Click(object sender, EventArgs e)
     {
         Session.Clear();
         Response.Redirect("LogInP.aspx");
+    }
+    protected void AddOferta_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AddOfertaP.aspx");
     }
 }
