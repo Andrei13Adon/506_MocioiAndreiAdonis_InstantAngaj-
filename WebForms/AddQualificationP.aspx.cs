@@ -44,7 +44,7 @@ public partial class WebForms_AddQualificationP : System.Web.UI.Page
             Clasament.Rows.Add(row);
         }
         con.Close();
-    }
+        }
     }
     public void AddCalificare(object sender, EventArgs e)
     {

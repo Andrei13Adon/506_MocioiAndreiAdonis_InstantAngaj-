@@ -24,4 +24,8 @@ public partial class MasterPageClientP : System.Web.UI.MasterPage
     {
         Response.Redirect("QualificationClientP.aspx");
     }
+    protected void ButtonAllOfete_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("SeeAllOferte.aspx");
+    }
 }
