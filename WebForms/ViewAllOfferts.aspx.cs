@@ -6,16 +6,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class WebForms_SeeAllOferte : System.Web.UI.Page
+public partial class WebForms_ViewAllOfferts : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["login"] != null)//&& !Page.IsPostBack Request.QueryString["Oferta"] != null 
+        if (Session["login"] != null)
         {
             SqlConnection con = DbConnection.GetSqlConnection();
             con.Open();
             SqlCommand c;
-            c = new SqlCommand("select o.Nume, o.Id from ClientP_CalificareP clca, CalificareP ca, CalificareP_OferteP cao, OfertaP o where clca.Id_CalificareP = ca.Id and ca.Id = cao.Id_CalificareP and cao.Id_OferteP = o.Id and o.Valabila !=" + -1 + "and clca.Id_ClientP = " + ((LogData)Session["login"]).getId(), con);
+            c = new SqlCommand("select cp.Id, cp.Nume from CalificareP cp where cp.Id NOT IN ( select c.Id from CalificareP_OferteP co, CalificareP c where co.Id_CalificareP = c.Id and co.Id_OferteP = " + Request.QueryString["Oferta"] + " )", con);
             SqlDataReader r = c.ExecuteReader();
             TableRow row1 = Clasament.Rows[0];
             Clasament.Rows.Clear();
@@ -37,7 +37,7 @@ public partial class WebForms_SeeAllOferte : System.Web.UI.Page
                 TableCell cell3 = new TableCell();
                 LinkButton IdCalificare = new LinkButton();
                 IdCalificare.Text = (Int32)r["Id"] + "";
-                IdCalificare.Click += new EventHandler(SeeCalificare);
+                //IdCalificare.Click += new EventHandler(AddCalificare);
                 cell3.Controls.Add(IdCalificare);
                 row.Cells.Add(cell3);
 
@@ -45,11 +45,5 @@ public partial class WebForms_SeeAllOferte : System.Web.UI.Page
             }
             con.Close();
         }
-    }
-    public void SeeCalificare(object sender, EventArgs e)
-    {
-        LinkButton IdCalificare = (LinkButton)sender;
-
-        Response.Redirect("/WebForms/DetaliOfertaDisP.aspx?Oferta=" + IdCalificare.Text);
     }
 }

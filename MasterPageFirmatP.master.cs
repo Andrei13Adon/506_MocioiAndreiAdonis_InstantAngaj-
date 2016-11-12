@@ -24,4 +24,8 @@ public partial class MasterPageFirmatP : System.Web.UI.MasterPage
     {
         Response.Redirect("AddOfertaP.aspx");
     }
+    protected void ButtonVAllOff_Click(object sender, EventArgs e)
+    {
+         Response.Redirect("ViewAllOfferts.aspx");
+    }
 }
