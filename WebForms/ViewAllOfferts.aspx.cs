@@ -15,7 +15,7 @@ public partial class WebForms_ViewAllOfferts : System.Web.UI.Page
             SqlConnection con = DbConnection.GetSqlConnection();
             con.Open();
             SqlCommand c;
-            c = new SqlCommand("select cp.Id, cp.Nume from CalificareP cp where cp.Id NOT IN ( select c.Id from CalificareP_OferteP co, CalificareP c where co.Id_CalificareP = c.Id and co.Id_OferteP = " + Request.QueryString["Oferta"] + " )", con);
+            c = new SqlCommand("select o.Id, o.Nume, o.Valabila from OfertaP o where o.Id_FirmaP = " + ((LogData)Session["login"]).getId(), con);
             SqlDataReader r = c.ExecuteReader();
             TableRow row1 = Clasament.Rows[0];
             Clasament.Rows.Clear();
@@ -35,15 +35,28 @@ public partial class WebForms_ViewAllOfferts : System.Web.UI.Page
                 row.Cells.Add(cell2);
 
                 TableCell cell3 = new TableCell();
-                LinkButton IdCalificare = new LinkButton();
-                IdCalificare.Text = (Int32)r["Id"] + "";
-                //IdCalificare.Click += new EventHandler(AddCalificare);
-                cell3.Controls.Add(IdCalificare);
+                int tip = (Int32)r["Valabila"];
+                if(tip==1)
+                    cell3.Text = "Da";
+                else
+                    cell3.Text = "Nu";
                 row.Cells.Add(cell3);
+
+                TableCell cell4 = new TableCell();
+                LinkButton IdOferta = new LinkButton();
+                IdOferta.Text = (Int32)r["Id"] + "";
+                IdOferta.Click += new EventHandler(ViewOferta);
+                cell4.Controls.Add(IdOferta);
+                row.Cells.Add(cell4);
 
                 Clasament.Rows.Add(row);
             }
             con.Close();
         }
+    }
+    public void ViewOferta(object sender, EventArgs e)
+    {
+        LinkButton IdCalificare = (LinkButton)sender;
+        Response.Redirect("/WebForms/OfertaDetaliataFP.aspx?Oferta=" + IdCalificare.Text);
     }
 }
