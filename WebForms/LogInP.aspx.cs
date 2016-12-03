@@ -36,7 +36,7 @@ public partial class WebForms_LogInP : System.Web.UI.Page
                 logatCuSucces = true;
                 Session["login"] = new LogData((Int32)r["Id"], false);
 
-                Response.Redirect("HomeClientP.aspx");
+                Response.Redirect("/WebForms/HomeClientP.aspx");
             }
             //conn.Close();
          if (logatCuSucces == false) Label1.Text = "Numele de utilizator sau parola sunt incorecte";
@@ -52,7 +52,7 @@ public partial class WebForms_LogInP : System.Web.UI.Page
                     logatCuSucces = true;
                     Session["login"] = new LogData((Int32)r["Id"], true);
 
-                    Response.Redirect("HomeFirmaP.aspx");
+                    Response.Redirect("/WebForms/HomeFirmaP.aspx");
                 }
              //conn.Close();
              if (logatCuSucces == false) Label1.Text = "Numele de utilizator sau parola sunt incorecte";
