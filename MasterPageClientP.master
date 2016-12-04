@@ -14,8 +14,9 @@
         <div class="Meniu">
              <ul class="inline">
                  <asp:Button ID="Home" runat="server" Text="Home" OnClick="Home_Click" />
-                 <asp:Button ID="ButtonCalificare" runat="server" Text="My Qualification" OnClick="ButtonCalificare_Click" />
-                 <asp:Button ID="ButtonAllOfete" runat="server" Text="Toate Ofertele" OnClick="ButtonAllOfete_Click" />
+                 <asp:Button ID="ButtonCalificare" runat="server" Text="Calificarile Mele" OnClick="ButtonCalificare_Click" />
+                 <asp:Button ID="ButtonAllOfete" runat="server" Text="Ofertele Calificari" OnClick="ButtonAllOfete_Click" />
+                 <asp:Button ID="ButtonToateOfertele" runat="server" Text="Toate Ofertele" OnClick="ButtonToateOfertele_Click" />
                  <asp:Button ID="LogOff" runat="server" Text="Log Off" OnClick="LogOff_Click" />
             </ul>
         </div>

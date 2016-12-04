@@ -28,4 +28,8 @@ public partial class MasterPageClientP : System.Web.UI.MasterPage
     {
         Response.Redirect("SeeAllOferte.aspx");
     }
+    protected void ButtonToateOfertele_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("ToateOferteleClP.aspx");
+    }
 }

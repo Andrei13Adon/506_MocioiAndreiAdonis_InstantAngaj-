@@ -7,20 +7,21 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "506_MocioiAndreiAdonis_Inst
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		Debug.AspNetCompiler.VirtualPath = "/Ingineria-Programarii"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\echipa\New folder (2)\Ingineria-Programarii\"
+		Debug.AspNetCompiler.PhysicalPath = "..\506_MocioiAndreiAdonis_InstantAngaj\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Ingineria-Programarii\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/Ingineria-Programarii"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\echipa\New folder (2)\Ingineria-Programarii\"
+		Release.AspNetCompiler.PhysicalPath = "..\506_MocioiAndreiAdonis_InstantAngaj\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Ingineria-Programarii\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "17245"
+		SlnRelativePath = "..\506_MocioiAndreiAdonis_InstantAngaj\"
 	EndProjectSection
 EndProject
 Global

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageClientP.master" AutoEventWireup="true" CodeFile="SeeAllOferte.aspx.cs" Inherits="WebForms_SeeAllOferte" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageClientP.master" AutoEventWireup="true" CodeFile="ToateOferteleClP.aspx.cs" Inherits="WebForms_ToateOferteleClP" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
     <div class="MarginClass">
-         <h1 > Toate Ofertele Disponibile dupa Calificari: </h1>
+         <h1 > Toate Ofertele Disponibile: </h1>
 
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         
