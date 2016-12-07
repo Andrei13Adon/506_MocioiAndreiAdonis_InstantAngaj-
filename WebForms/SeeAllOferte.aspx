@@ -8,7 +8,7 @@
     <div class="MarginClass">
          <h1 > Toate Ofertele Disponibile dupa Calificari: </h1>
 
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <!-- <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> -->
         
      <asp:Table ID="Clasament" runat="server">
          <asp:TableHeaderRow BackColor=Aqua>
